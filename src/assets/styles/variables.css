@@ -1,0 +1,149 @@
+:root {
+  --color-primary: #4f46e5;
+  --color-primary-soft: rgba(79, 70, 229, 0.15);
+  --color-bg: #050816;
+  --color-bg-elevated: #0f172a;
+  --color-border: #1f2933;
+  --color-text: #e5e7eb;
+  --color-text-muted: #9ca3af;
+  --radius-lg: 12px;
+  --spacing: 16px;
+}
+
+/* 简单布局样式，与布局组件呼应 */
+.layout {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.layout-public .header,
+.layout-app .topbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 24px;
+  background: rgba(15, 23, 42, 0.9);
+  border-bottom: 1px solid var(--color-border);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.layout-public .nav a {
+  margin-left: 16px;
+}
+
+.layout-public .main,
+.layout-app .main {
+  padding: 24px;
+}
+
+.footer {
+  padding: 12px 24px;
+  font-size: 12px;
+  color: var(--color-text-muted);
+  border-top: 1px solid var(--color-border);
+  margin-top: auto;
+}
+
+.btn-primary {
+  padding: 8px 16px;
+  border-radius: 999px;
+  background: var(--color-primary);
+  color: #fff;
+  font-weight: 500;
+}
+
+.btn-secondary {
+  padding: 8px 16px;
+  border-radius: 999px;
+  border: 1px solid var(--color-border);
+}
+
+/* app 布局 */
+.layout-app {
+  flex-direction: row;
+}
+
+.layout-app .sidebar {
+  width: 220px;
+  background: #020617;
+  border-right: 1px solid var(--color-border);
+  padding: 16px;
+}
+
+.layout-app .sidebar-nav {
+  margin-top: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.layout-app .sidebar-nav a {
+  padding: 8px 10px;
+  border-radius: 8px;
+}
+
+.layout-app .sidebar-nav a.router-link-active {
+  background: var(--color-primary-soft);
+}
+
+.layout-app .content-wrapper {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.layout-app .topbar {
+  background: rgba(15, 23, 42, 0.95);
+}
+
+.layout-app .main {
+  flex: 1;
+  padding: 24px;
+}
+
+/* 简单的 home 样式 */
+.home {
+  max-width: 800px;
+  margin: 80px auto 0;
+  text-align: left;
+}
+
+.home h1 {
+  font-size: 40px;
+  margin-bottom: 16px;
+}
+
+.home p {
+  color: var(--color-text-muted);
+}
+
+.home-actions {
+  margin-top: 24px;
+  display: flex;
+  gap: 12px;
+}
+
+/* auth form */
+.auth {
+  max-width: 400px;
+  margin: 80px auto 0;
+}
+
+.auth form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 16px;
+}
+
+.auth input {
+  width: 100%;
+  padding: 8px;
+  border-radius: 8px;
+  border: 1px solid var(--color-border);
+  background: #020617;
+  color: var(--color-text);
+}
